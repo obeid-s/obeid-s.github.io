@@ -1,2 +1,3 @@
 # iR_sofa_telemetry.github.io
-Beta modeiRacing telemetry
+# Beta mode 
+iRacing telemetry, upload your .ibt files and compare your laps
