@@ -236,13 +236,13 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.display-data-canvas .slider_div {
+.slider_div {
   display: block;
   width: 100%;
   margin: 5px auto;
 }
 
-.display-data-canvas .slider_div input {
+.slider_div input {
   display: block;
   width: 100%;
 }
@@ -253,5 +253,13 @@ body {
   height: 700px;
   border: 1px solid #F2613F;
   border-radius: 10px;
+  position: sticky;
+  top: 100px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.track-map canvas {
+  border: 1px solid white;
 }
 
