@@ -42,6 +42,13 @@
   </div>
   <div class="center_div cFlex">
     <div class="track-map cFlex-item">
+      <div class="slider_div">
+        <span id="slider_range_value">Move 1</span>
+        <input id="slider_range" type="range" min="1" max="1" step="1">
+        <hr>
+        <span id="slider_scale_value">Scale 1</span>
+        <input id="slider_scale" type="range" value="1.0" min="1.0" max="1.0" step="0.0">
+      </div>
       <canvas id="track"></canvas>
     </div>
     <div class="display-data-smaller-canvas cFlex-item">
@@ -51,6 +58,11 @@
       <canvas class="main_canvas" id="smaller-speed"></canvas>
       <canvas class="main_canvas" id="smaller-steer"></canvas>
       <canvas class="main_canvas" id="smaller-gear"></canvas>
+      <canvas class="main_canvas" id="smaller-Fleft"></canvas>
+      <canvas class="main_canvas" id="smaller-Fright"></canvas>
+      <canvas class="main_canvas" id="smaller-Rleft"></canvas>
+      <canvas class="main_canvas" id="smaller-Rright"></canvas>
+
     </div>
     <div class="display-data-canvas cFlex-item">
       <canvas class="main_canvas" id="delta"></canvas>
@@ -59,16 +71,19 @@
       <canvas class="main_canvas" id="speed"></canvas>
       <canvas class="main_canvas" id="steer"></canvas>
       <canvas class="main_canvas" id="gear"></canvas>
-      <div class="slider_div">
-        <span id="slider_range_value">Move 1</span>
-        <input id="slider_range" type="range" min="1" max="1" step="1">
-        <hr>
-        <span id="slider_scale_value">Scale 1</span>
-        <input id="slider_scale" type="range" value="1.0" min="1.0" max="5" step="0.1">
-      </div>
+      <!-- TODO:: Add Left Front and Right Front speed -->
+       <div>
+        <canvas class="main_canvas" id="FL_speed"></canvas>
+        <canvas class="main_canvas" id="FR_speed"></canvas>
+       </div>
+      <!-- TODO:: Add Left Rear and Right Rear speed -->
+      <div>
+        <canvas class="main_canvas" id="RL_speed"></canvas>
+        <canvas class="main_canvas" id="RR_speed"></canvas>
+       </div>
     </div>
   </div>
-
-  <script src="all.min.js"></script>
+  
+  <script src="all.min.js?v=1.1"></script>
 </body>
 </html>
