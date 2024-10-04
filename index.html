@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iRTelemetry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="loading_div">
+    <div class="loading"></div>
+  </div>
+  <div class="upload-div">
+    <form id="form_data" method="POST">
+      <div class="each-upload">
+        <span>ibt file 1</span>
+        <input type="file" name="file1" />
+      </div>
+      <div class="each-upload">
+        <span>ibt file 2</span>
+        <input type="file" name="file2" />
+      </div>
+
+      <div class="btn-load">
+        <input type="submit" value="Load">
+      </div>
+    </form>
+  </div>
+  <div class="session_info">
+    <div class="each-session-info">
+      <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 128A96 96 0 1 0 416 0a96 96 0 1 0 0 192zM96 112c0-26.5 21.5-48 48-48s48 21.5 48 48l0 164.5c0 17.3 7.1 31.9 15.3 42.5C217.8 332.6 224 349.5 224 368c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-18.5 6.2-35.4 16.7-48.9C88.9 308.4 96 293.8 96 276.5L96 112zM144 0C82.1 0 32 50.2 32 112l0 164.4c0 .1-.1 .3-.2 .6c-.2 .6-.8 1.6-1.7 2.8C11.2 304.2 0 334.8 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-33.2-11.2-63.8-30.1-88.1c-.9-1.2-1.5-2.2-1.7-2.8c-.1-.3-.2-.5-.2-.6L256 112C256 50.2 205.9 0 144 0zm0 416c26.5 0 48-21.5 48-48c0-20.9-13.4-38.7-32-45.3L160 112c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 210.7c-18.6 6.6-32 24.4-32 45.3c0 26.5 21.5 48 48 48z"/></svg>
+      <span>32c(27c)</span>
+    </div>
+    <div class="each-session-info">
+      <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M176 8c-6.6 0-12.4 4-14.9 10.1l-29.4 74L55.6 68.9c-6.3-1.9-13.1 .2-17.2 5.3s-4.6 12.2-1.4 17.9l39.5 69.1L10.9 206.4c-5.4 3.7-8 10.3-6.5 16.7s6.7 11.2 13.1 12.2l78.7 12.2L90.6 327c-.5 6.5 3.1 12.7 9 15.5s12.9 1.8 17.8-2.6l35.3-32.5 9.5-35.4 10.4-38.6c8-29.9 30.5-52.1 57.9-60.9l41-59.2c11.3-16.3 26.4-28.9 43.5-37.2c-.4-.6-.8-1.2-1.3-1.8c-4.1-5.1-10.9-7.2-17.2-5.3L220.3 92.1l-29.4-74C188.4 12 182.6 8 176 8zM367.7 161.5l135.6 36.3c6.5 1.8 11.3 7.4 11.8 14.2l4.6 56.5-201.5-54 32.2-46.6c3.8-5.6 10.8-8.1 17.3-6.4zm-69.9-30l-47.9 69.3c-21.6 3-40.3 18.6-46.3 41l-10.4 38.6-16.6 61.8-8.3 30.9c-4.6 17.1 5.6 34.6 22.6 39.2l15.5 4.1c17.1 4.6 34.6-5.6 39.2-22.6l8.3-30.9 247.3 66.3-8.3 30.9c-4.6 17.1 5.6 34.6 22.6 39.2l15.5 4.1c17.1 4.6 34.6-5.6 39.2-22.6l8.3-30.9L595 388l10.4-38.6c6-22.4-2.5-45.2-19.6-58.7l-6.8-84c-2.7-33.7-26.4-62-59-70.8L384.2 99.7c-32.7-8.8-67.3 4-86.5 31.8zm-17 131a24 24 0 1 1 -12.4 46.4 24 24 0 1 1 12.4-46.4zm217.9 83.2A24 24 0 1 1 545 358.1a24 24 0 1 1 -46.4-12.4z"/></svg>
+      <span>45c(31c)</span>
+    </div>
+    <div class="each-session-info">
+      <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128c-17.7 0-32 14.3-32 32s14.3 32 32 32l320 0c53 0 96-43 96-96s-43-96-96-96L320 0c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32l32 0c53 0 96-43 96-96s-43-96-96-96L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0c-17.7 0-32 14.3-32 32zM128 512l32 0c53 0 96-43 96-96s-43-96-96-96L32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/></svg>
+      <span>3.2km/h(5.1km/h)</span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="laps">
+      <div class="each-file-section">
+        <span class="filename_laps">File 1</span>
+        <ul data-file-index="0" class="ul-style ul-laps1">
+          <li>1:33:313</li>
+          <li>1:33:313</li>
+          <li class="selectedFile1">1:33:313</li>
+          <li>1:33:313</li>
+        </ul>
+      </div>
+      <div class="each-file-section">
+        <span class="filename_laps">File 2</span>
+        <ul data-file-index="1" class="ul-style ul-laps2">
+          <li>2:33:313</li>
+          <li class="selectedFile2">2:34:313</li>
+          <li>2:30:313</li>
+          <li>2:33:313</li>
+        </ul>
+      </div>
+    </div>
+    <div class="track">
+      <canvas id="track-canvas"></canvas>
+    </div>
+    <div class="data-canvas">
+      <div class="controllers">
+        <div class="controller controller-btn" id="controller-zoom-out" style="cursor: pointer;">
+          <span class="controller-icon">
+            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM136 184c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></svg>
+          </span>
+          <span class="controller-text">zoom out</span>
+        </div>
+        <div class="controller">
+          <span class="controller-icon">
+            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM184 296c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64 64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-64 0 0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64-64 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l64 0 0 64z"/></svg>
+          </span>
+          <span class="controller-text">hover on chart and left click mouse</span>
+        </div>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-delta"></canvas>
+        <canvas class="main-canvas" id="delta"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-throttle"></canvas>
+        <canvas class="main-canvas" id="throttle"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-brake"></canvas>
+        <canvas class="main-canvas" id="brake"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-speed"></canvas>
+        <canvas class="main-canvas" id="speed"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-gear"></canvas>
+        <canvas class="main-canvas" id="gear"></canvas>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="DataLap.js"></script>
+  <script src="TrackCoordinate.js"></script>
+  <script src="IbtFile.js"></script>
+  <script src="DataSmallCanvas.js"></script>
+  <script src="DataCanvas.js"></script>
+  <script src="TrackCanvas.js"></script>
+  <script src="Canvases.js"></script>
+  <script src="main.js"></script> -->
+  <script src="all.min.js?v=0.0.1"></script>
+</body>
+</html>
