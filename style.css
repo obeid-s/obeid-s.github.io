@@ -59,6 +59,24 @@ body {
   margin: 10px auto;
 }
 
+.about-files {
+  color: #821131;
+  font-size: 14px;
+  font-weight: 700;
+  background: #d8d2c2;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+.about-files span {
+  background-color: #821131;
+  color: #d8d2c2;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 0px 5px;
+  margin-right: 5px;
+}
+
 .btn-load {
   display: block;
   width: 200px;
