@@ -22,6 +22,7 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
+  z-index: 999;
 }
 
 .loading_div .loading {
@@ -45,6 +46,14 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.file1BorderColor {
+  border: 4px solid rgb(31, 7, 102);
+}
+
+.file2BorderColor {
+  border: 4px solid #821131;
 }
 
 .upload-div {
@@ -193,6 +202,50 @@ body {
   height: 600px;
   margin: 10px auto;
   vertical-align: middle;
+  position: relative;
+}
+
+.content .track .track_conditions {
+  position: absolute;
+  top: -70px;
+  width: 50%;
+  height: 70px;
+  background-color: #D8D2C2;
+  color: black;
+  border-radius: 5px;
+}
+
+.content .track .track_conditions:first-of-type {
+  border-right: 5px solid #32312f;
+}
+
+.content .track .track_conditions .each-condition {
+  display: inline-block;
+  padding: 5px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.content .track .track_conditions .each-condition:not(:last-child) {
+  border-right: 1px solid #32312f;
+}
+
+.content .track .track_conditions .each-condition .cond_icon,
+.content .track .track_conditions .each-condition .cond_value {
+  display: block;
+  margin: 0px auto;
+}
+.content .track .track_conditions .each-condition .cond_icon {
+  width: 25px;
+  height: 25px;
+}
+
+.content .track .track_conditions .each-condition .cond_value {
+  text-align: center;
+}
+
+.content .track .track_conditions .each-condition .cond_icon img {
+  width: 100%;
 }
 
 .content .track canvas {
