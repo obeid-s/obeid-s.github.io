@@ -113,7 +113,7 @@ body {
   display: inline-block;
   width: 160px;
   height: 600px;
-  border: 2px solid #031ddb;
+  /* border: 2px solid #031ddb; */
   margin: 10px auto;
   vertical-align: middle;
 }
@@ -174,7 +174,7 @@ body {
   display: inline-block;
   width: 30%;
   height: 600px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 10px auto;
   vertical-align: middle;
 }
@@ -220,7 +220,7 @@ body {
   display: inline-block;
   width: 55%;
   margin: 10px auto;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   vertical-align: middle;
 }
 
