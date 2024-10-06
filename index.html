@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
-  <link rel="stylesheet" href="style.css?v=0.0.3">
+  <link rel="stylesheet" href="style.css?v=0.0.4">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -126,12 +126,33 @@
         <canvas class="small-canvas" id="small-CFSRideHeight"></canvas>
         <canvas class="main-canvas" id="CFSRideHeight"></canvas>
       </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-LFRideHeight"></canvas>
+        <canvas class="main-canvas" id="LFRideHeight"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
+        <canvas class="main-canvas" id="RFRideHeight"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-LRRideHeight"></canvas>
+        <canvas class="main-canvas" id="LRRideHeight"></canvas>
+      </div>
+      <div class="each-canvas">
+        <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
+        <canvas class="main-canvas" id="RRRideHeight"></canvas>
+      </div>
+      
     </div>
     <div class="steeringWheel" style="display: none;">
       <img src="images/wheel-tr.png" id="steeringWheel1" alt="wheel-tr" style="display: none;">
       <img src="images/wheel-tr.png" id="steeringWheel2" alt="wheel-tr" style="display: none;">
     </div>
   </div>
-  <script src="all.min.js?v=0.0.3"></script>
+
+
+  <div class="footer"></div>
+
+  <script src="all.min.js?v=0.0.4"></script>
 </body>
 </html>
