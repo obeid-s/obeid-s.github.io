@@ -141,7 +141,7 @@ body {
   width: 160px;
   height: 600px;
   margin: 10px auto;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .laps .each-file-section .filename_laps {
@@ -201,7 +201,7 @@ body {
   width: 30%;
   height: 600px;
   margin: 10px auto;
-  vertical-align: middle;
+  vertical-align: baseline;
   position: relative;
 }
 
@@ -299,6 +299,16 @@ body {
   font-size: 0px;
 }
 
+.content .data-canvas .each-canvas .split-canvases {
+  display: inline-block;
+  width: 45%;
+  height: 100%;
+}
+
+.content .data-canvas .each-canvas .split-canvases .main-canvas {
+  width: 100%;
+}
+
 .content .data-canvas .each-canvas .small-canvas {
   display: inline-block;
   width: 120px;
@@ -314,4 +324,9 @@ body {
   height: 100%;
   background-color: #D8D2C2;
   border-top: 2px solid #4a4947;
+}
+
+.footer {
+  width: 100%;
+  height: 500px;
 }
