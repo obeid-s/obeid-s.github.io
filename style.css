@@ -205,50 +205,49 @@ body {
   position: relative;
 }
 
-.content .track .track_conditions {
-  position: absolute;
-  top: -70px;
-  width: 50%;
+.content .track_conditions {
+  display: inline-block;
+  width: 49.7%;
   height: 70px;
   background-color: #D8D2C2;
   color: black;
   border-radius: 5px;
 }
 
-.content .track .track_conditions:first-of-type {
+.content .track_conditions:first-of-type {
   border-right: 5px solid #32312f;
 }
 
-.content .track .track_conditions .each-condition {
+.content .track_conditions .each-condition {
   display: inline-block;
   padding: 5px;
   font-weight: 900;
   font-size: 20px;
 }
 
-.content .track .track_conditions .each-condition:not(:last-child) {
+.content .track_conditions .each-condition:not(:last-child) {
   border-right: 1px solid #32312f;
 }
 
-.content .track .track_conditions .each-condition .cond_icon,
-.content .track .track_conditions .each-condition .cond_value {
+.content .track_conditions .each-condition .cond_icon,
+.content .track_conditions .each-condition .cond_value {
   display: block;
   margin: 0px auto;
 }
-.content .track .track_conditions .each-condition .cond_icon {
+.content .track_conditions .each-condition .cond_icon {
   width: 25px;
   height: 25px;
 }
 
-.content .track .track_conditions .each-condition .cond_value {
+.content .track_conditions .each-condition .cond_value {
   text-align: center;
 }
 
-.content .track .track_conditions .each-condition .cond_icon img {
+.content .track_conditions .each-condition .cond_icon img {
   width: 100%;
 }
 
-.content .track canvas {
+.content .track .track-canvas {
   width: 100%;
   height: 100%;
   background-color: #32312f;
@@ -293,7 +292,7 @@ body {
 }
 
 .content .data-canvas .each-canvas {
-  width: 100%;
+  width: 99%;
   height: 155px;
   margin: 0px auto;
   font-size: 0px;
@@ -311,7 +310,7 @@ body {
 
 .content .data-canvas .each-canvas .small-canvas {
   display: inline-block;
-  width: 120px;
+  width: 125px;
   height: 100%;
   background-color: #D8D2C2;
   border-top: 2px solid #4a4947;
@@ -320,7 +319,7 @@ body {
 
 .content .data-canvas .each-canvas .main-canvas {
   display: inline-block;
-  width: 79%;
+  width: 83.8%;
   height: 100%;
   background-color: #D8D2C2;
   border-top: 2px solid #4a4947;
