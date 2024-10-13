@@ -199,6 +199,7 @@ body {
 .content .track {
   display: inline-block;
   width: 30%;
+  max-width: 565px;
   height: 600px;
   margin: 10px auto;
   vertical-align: baseline;
@@ -287,6 +288,7 @@ body {
 .content .data-canvas {
   display: inline-block;
   width: 55%;
+  max-width: 1040px;
   margin: 10px auto;
   vertical-align: middle;
 }
