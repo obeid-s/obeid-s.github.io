@@ -312,6 +312,18 @@ body {
   border-right: 2px solid #4a4947;
 }
 
+.content .data-canvas .each-canvas .split-canvases {
+  display: inline-block;
+  width: 48%;
+  height: 100%;
+}
+.content .data-canvas .each-canvas .split-canvases .main-canvas {
+  width: 100%;
+}
+.content .data-canvas .each-canvas .split-canvases .small-canvas {
+  display: none;
+}
+
 .content .data-canvas .each-canvas .main-canvas {
   display: inline-block;
   width: 83.8%;

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
-  <link rel="stylesheet" href="style.css?v=0.1.3">
+  <link rel="stylesheet" href="style.css?v=0.1.4">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -132,21 +132,33 @@
         <canvas class="main-canvas" id="CFSRideHeight"></canvas>
       </div>
       <div class="each-canvas">
-        <canvas class="small-canvas" id="small-LFRideHeight"></canvas>
-        <canvas class="main-canvas" id="LFRideHeight"></canvas>
+        <div class="split-canvases">
+          <canvas class="small-canvas" id="small-LFRideHeight"></canvas>
+          <canvas class="main-canvas" id="LFRideHeight"></canvas>
+        </div>
+        <div class="split-canvases">
+          <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
+          <canvas class="main-canvas" id="RFRideHeight"></canvas>
+        </div>
       </div>
-      <div class="each-canvas">
+      <!-- <div class="each-canvas">
         <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
         <canvas class="main-canvas" id="RFRideHeight"></canvas>
-      </div>
+      </div> -->
       <div class="each-canvas">
-        <canvas class="small-canvas" id="small-LRRideHeight"></canvas>
-        <canvas class="main-canvas" id="LRRideHeight"></canvas>
+        <div class="split-canvases">
+          <canvas class="small-canvas" id="small-LRRideHeight"></canvas>
+          <canvas class="main-canvas" id="LRRideHeight"></canvas>
+        </div>
+        <div class="split-canvases">
+          <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
+          <canvas class="main-canvas" id="RRRideHeight"></canvas>
+        </div>
       </div>
-      <div class="each-canvas">
+      <!-- <div class="each-canvas">
         <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
         <canvas class="main-canvas" id="RRRideHeight"></canvas>
-      </div>
+      </div> -->
       
     </div>
     <div class="steeringWheel" style="display: none;">
@@ -166,6 +178,7 @@
 
 
   <div class="footer"></div>
-  <script src="all.min.js?v=0.1.3"></script>
+
+  <script src="all.min.js?v=0.1.4"></script>
 </body>
 </html>
