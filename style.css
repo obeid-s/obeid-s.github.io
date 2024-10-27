@@ -294,6 +294,7 @@ body {
 
 .content .track_conditions .each-condition .cond_value {
   text-align: center;
+  margin-top: 5px;
 }
 
 .content .track_conditions .each-condition .cond_icon img {
