@@ -49,11 +49,15 @@ body {
 }
 
 .file1BorderColor {
-  border: 4px solid rgb(31, 7, 102);
+  border: 3px solid rgb(72, 109, 232);
 }
 
 .file2BorderColor {
-  border: 4px solid #821131;
+  border: 3px solid rgb(197, 83, 5);
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 .upload-div {
@@ -63,12 +67,47 @@ body {
 }
 .each-upload {
   display: inline-block;
+  vertical-align: top;
   width: 32%;
-  padding: 5px;
+  height: 90px;
   margin: 10px auto;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
 }
 .each-upload:not(:first-of-type) {
   border-left: 1px solid white;
+}
+.each-upload .label_file {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 31, 45);
+  overflow: hidden;
+}
+
+.each-upload .label_file:hover {
+  background-color: rgb(25, 36, 50);
+}
+
+.each-upload .label_file .text-span {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.each-upload .label_file .str_file_name {
+  font-size: 12px;
+  position: absolute;
+  top: 58%;
+}
+
+.each-upload .label_file .main-color {
+  border-bottom: 3px solid rgb(72, 109, 232);
+}
+
+.each-upload .label_file .compared-color {
+  border-bottom: 3px solid rgb(197, 83, 5);
 }
 
 .about-files {
@@ -148,11 +187,20 @@ body {
 
 .laps .each-file-section .filename_laps {
   display: block;
-  background: #d8d2c2;
-  color: #821131;
-  font-size: 28px;
+  font-size: 18px;
   padding: 5px;
   font-weight: 900;
+  border-radius: 5px;
+}
+
+.laps .each-file-section .main-bg {
+  background-color: rgb(72, 109, 232);
+  color: black;
+}
+
+.laps .each-file-section .compared-bg {
+  background-color: rgb(197, 83, 5);
+  color: black;
 }
 
 .laps .each-file-section .ul-style {
@@ -161,22 +209,23 @@ body {
 
 .laps .each-file-section .ul-style li {
   margin: 5px;
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 1.8;
   cursor: pointer;
 }
 
 .laps .each-file-section .ul-style li:hover {
-  background-color: #82113138;
-  border-radius: 50px;
+  background-color: #46464638;
+  border-radius: 5px;
 }
 
 .laps .each-file-section .ul-style .selectedFile1,
 .laps .each-file-section .ul-style .selectedFile2 {
   position: relative;
-  background-color: #d8d2c2;
+  background-color: #d8d2c269;
   color: black;
   font-weight: 900;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 .laps .each-file-section .ul-style .selectedFile1::before,
@@ -212,8 +261,7 @@ body {
 .content .track_conditions {
   display: inline-block;
   width: 49.7%;
-  height: 70px;
-  background-color: #D8D2C2;
+  background-color: #d8d2c2b4;
   color: black;
   border-radius: 5px;
 }
@@ -226,7 +274,7 @@ body {
   display: inline-block;
   padding: 5px;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .content .track_conditions .each-condition:not(:last-child) {
@@ -239,8 +287,8 @@ body {
   margin: 0px auto;
 }
 .content .track_conditions .each-condition .cond_icon {
-  width: 25px;
-  height: 25px;
+  width: 16px;
+  height: 16px;
 }
 
 .content .track_conditions .each-condition .cond_value {
@@ -279,13 +327,14 @@ body {
 
 .controllers .controller .controller-icon {
   display: block;
-  width: 25px;
+  width: 16px;
   margin: 0px auto;
 }
 
 .controllers .controller .controller-text {
   display: block;
   font-weight: 900;
+  font-size: 12px;
 }
 
 .content .data-canvas {

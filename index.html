@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
-  <link rel="stylesheet" href="style.css?v=0.1.4">
+  <link rel="stylesheet" href="style.css?v=0.1.8">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -16,12 +16,18 @@
   <div class="upload-div">
     <form id="form_data" method="POST">
       <div class="each-upload">
-        <span>ibt file 1</span>
-        <input type="file" name="file1" />
+        <label class="label_file clickable" for="file_num1">
+          <span class="text-span main-color">ibt file 1</span>
+          <span class="str_file_name"></span>
+        </label>
+        <input style="display: none;" id="file_num1" type="file" name="file1" />
       </div>
       <div class="each-upload">
-        <span>ibt file 2</span>
-        <input type="file" name="file2" />
+        <label class="label_file clickable" for="file_num2">
+          <span class="text-span compared-color">ibt file 2</span>
+          <span class="str_file_name"></span>
+        </label>
+        <input style="display: none;" id="file_num2" type="file" name="file2" />
       </div>
       <div class="each-upload">
         <div class="btn-load">
@@ -34,7 +40,7 @@
   <div class="content">
     <div class="laps">
       <div class="each-file-section">
-        <span class="filename_laps">File 1</span>
+        <span class="filename_laps main-bg">Driver name</span>
         <ul data-file-index="0" class="ul-style ul-laps1">
           <li>00:00:00</li>
           <li>00:00:00</li>
@@ -42,7 +48,7 @@
         </ul>
       </div>
       <div class="each-file-section">
-        <span class="filename_laps">File 2</span>
+        <span class="filename_laps compared-bg">Driver name</span>
         <ul data-file-index="1" class="ul-style ul-laps2">
           <li>00:00:00</li>
           <li>00:00:00</li>
@@ -178,6 +184,6 @@
 
 
   <div class="footer"></div>
-  <script src="all.min.js?v=0.1.5"></script>
+  <script src="all.min.js?v=0.1.8"></script>
 </body>
 </html>
