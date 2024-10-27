@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
-  <link rel="stylesheet" href="style.css?v=0.2.0">
+  <link rel="stylesheet" href="style.css?v=0.2.1">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -73,11 +73,17 @@
           </span>
           <span class="controller-text">hover on chart and left click mouse</span>
         </div>
-        <div class="controller controller-btn" id="controller-play-lap" style="cursor: pointer;">
-          <span class="controller-icon">
-            <img src="images/play.png" id="play_pause_image" alt="play button" style="width: 16px; height: 16px;">
-          </span>
-          <span class="controller-text">Play the lap</span>
+        <div class="controller controller-btn">
+          <div class="split" id="controller-play-lap" style="cursor: pointer;">
+            <span class="controller-icon">
+              <img src="images/play.png" id="play_pause_image" alt="play button" style="width: 16px; height: 16px;">
+            </span>
+            <span class="controller-text">Play the lap</span>
+          </div>
+          <div class="split">
+            <span class="controller-text">Playback speed <span id="playback_speed_text">1</span></span>
+            <input type="range" dir="ltr" id="playback_speed" min="0.0001" max="0.0009" step="0.0001" value="0.0001">
+          </div>
         </div>
       </div>
             <!-- First File -->
@@ -190,6 +196,6 @@
 
 
   <div class="footer"></div>
-  <script src="all.min.js?v=0.2.0"></script>
+  <script src="all.min.js?v=0.2.1"></script>
 </body>
 </html>

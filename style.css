@@ -343,6 +343,10 @@ body {
   font-size: 12px;
 }
 
+.controllers .controller .split {
+  display: inline-block;
+}
+
 .content .data-canvas {
   display: inline-block;
   width: 55%;
