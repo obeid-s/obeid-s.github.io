@@ -229,7 +229,7 @@ body {
 .laps .each-file-section .ul-style .selectedFile2 {
   position: relative;
   background-color: #d8d2c269;
-  color: black;
+  color: white;
   font-weight: 900;
   border-radius: 5px;
 }
