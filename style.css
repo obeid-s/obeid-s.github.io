@@ -221,6 +221,7 @@ body {
 
 .laps .each-file-section .ul-style li:hover {
   background-color: #46464638;
+  color: white;
   border-radius: 5px;
 }
 
