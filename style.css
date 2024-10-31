@@ -98,6 +98,7 @@ body {
 }
 
 .each-upload .label_file .str_file_name {
+  width: 100%;
   font-size: 12px;
   position: absolute;
   top: 58%;
@@ -258,9 +259,8 @@ body {
   display: inline-block;
   width: 30%;
   max-width: 565px;
-  height: 600px;
   margin: 10px auto;
-  vertical-align: baseline;
+  vertical-align: top;
   position: relative;
 }
 
@@ -307,8 +307,9 @@ body {
 }
 
 .content .track .track-canvas {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 550px;
   background-color: rgb(20, 31, 45);
 }
 
@@ -353,7 +354,7 @@ body {
   width: 55%;
   max-width: 1040px;
   margin: 10px auto;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .content .data-canvas .each-canvas {
@@ -392,7 +393,22 @@ body {
   border-top: 2px solid #4a4947;
 }
 
+.track .above-track {
+  width: 100%;
+  height: 120px;
+}
+
+.track .above-track .main-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #0e1b2a;
+}
+
+.track .above-track .small-canvas {
+  display: none;
+}
+
 .footer {
   width: 100%;
-  height: 500px;
+  height: 100px;
 }

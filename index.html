@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
-  <link rel="stylesheet" href="style.css?v=0.2.2">
+  <link rel="stylesheet" href="style.css?v=0.2.3">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -18,14 +18,18 @@
       <div class="each-upload">
         <label class="label_file clickable" for="file_num1">
           <span class="text-span main-color">ibt file 1</span>
-          <span class="str_file_name"></span>
+          <span class="str_file_name">
+            <span style='display: block; text-align: center;'>Choose File</span>
+          </span>
         </label>
         <input style="display: none;" id="file_num1" type="file" name="file1" accept=".ibt" />
       </div>
       <div class="each-upload">
         <label class="label_file clickable" for="file_num2">
           <span class="text-span compared-color">ibt file 2</span>
-          <span class="str_file_name"></span>
+          <span class="str_file_name">
+            <span style='display: block; text-align: center;'>Choose File</span>
+          </span>
         </label>
         <input style="display: none;" id="file_num2" type="file" name="file2" accept=".ibt" />
       </div>
@@ -42,21 +46,25 @@
       <div class="each-file-section">
         <span class="filename_laps main-bg">Driver name</span>
         <ul data-file-index="0" class="ul-style ul-laps1">
-          <li>00:00:00</li>
-          <li>00:00:00</li>
-          <li>00:00:00</li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
         </ul>
       </div>
       <div class="each-file-section">
         <span class="filename_laps compared-bg">Driver name</span>
         <ul data-file-index="1" class="ul-style ul-laps2">
-          <li>00:00:00</li>
-          <li>00:00:00</li>
-          <li>00:00:00</li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
+          <li>00:00:00 <span class="lap_number">L 0</span></li>
         </ul>
       </div>
     </div>
     <div class="track">
+      <div class="above-track">
+        <canvas class="small-canvas" id="small-delta" style="display: none;"></canvas>
+        <canvas class="main-canvas" id="delta"></canvas>
+      </div>
       <canvas class="track-canvas" id="track-canvas"></canvas>
     </div>
     <div class="data-canvas">
@@ -125,10 +133,10 @@
         </div>
       </div>
       <!-- End Second file -->
-      <div class="each-canvas">
+      <!-- <div class="each-canvas">
         <canvas class="small-canvas" id="small-delta"></canvas>
         <canvas class="main-canvas" id="delta"></canvas>
-      </div>
+      </div> -->
       <div class="each-canvas">
         <canvas class="small-canvas" id="small-throttle"></canvas>
         <canvas class="main-canvas" id="throttle"></canvas>
@@ -196,6 +204,6 @@
 
 
   <div class="footer"></div>
-  <script src="all.min.js?v=0.2.2"></script>
+  <script src="all.min.js?v=0.2.3"></script>
 </body>
 </html>
