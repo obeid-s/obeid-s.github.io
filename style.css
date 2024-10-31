@@ -310,7 +310,8 @@ body {
   display: block;
   width: 100%;
   height: 550px;
-  background-color: rgb(20, 31, 45);
+  /* background-color: rgb(20, 31, 45); */
+  background-color: rgb(10, 23, 38);
 }
 
 .controllers {
@@ -358,7 +359,7 @@ body {
 }
 
 .content .data-canvas .each-canvas {
-  width: 99%;
+  width: 100%;
   height: 155px;
   margin: 0px auto;
   font-size: 0px;
@@ -366,16 +367,17 @@ body {
 
 .content .data-canvas .each-canvas .small-canvas {
   display: inline-block;
-  width: 125px;
+  width: 100px;
   height: 100%;
-  background-color: #0e1b2a;
+  /* background-color: #0e1b2a; */
+  background-color: rgb(10, 23, 38);
   border-top: 2px solid #4a4947;
   border-right: 2px solid #4a4947;
 }
 
 .content .data-canvas .each-canvas .split-canvases {
   display: inline-block;
-  width: 48%;
+  width: 50%;
   height: 100%;
 }
 .content .data-canvas .each-canvas .split-canvases .main-canvas {
@@ -387,9 +389,10 @@ body {
 
 .content .data-canvas .each-canvas .main-canvas {
   display: inline-block;
-  width: 83.8%;
+  width: 90.3%;
   height: 100%;
-  background-color: #0e1b2a;
+  /* background-color: #0e1b2a; */
+  background-color: rgb(10, 23, 38);
   border-top: 2px solid #4a4947;
 }
 
@@ -401,7 +404,8 @@ body {
 .track .above-track .main-canvas {
   width: 100%;
   height: 100%;
-  background-color: #0e1b2a;
+  /* background-color: #0e1b2a; */
+  background-color: rgb(10, 23, 38);
 }
 
 .track .above-track .small-canvas {
