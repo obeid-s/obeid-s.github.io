@@ -390,7 +390,7 @@ body {
 
 .content .data-canvas .each-canvas .small-canvas {
   display: inline-block;
-  width: 100px;
+  width: 10%;
   height: 100%;
   /* background-color: #0e1b2a; */
   background-color: rgb(10, 23, 38);
@@ -412,7 +412,7 @@ body {
 
 .content .data-canvas .each-canvas .main-canvas {
   display: inline-block;
-  width: 90.3%;
+  width: 90%;
   height: 100%;
   /* background-color: #0e1b2a; */
   background-color: rgb(10, 23, 38);
