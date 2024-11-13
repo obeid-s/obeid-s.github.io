@@ -217,7 +217,31 @@ body {
   margin: 5px;
   font-size: 14px;
   line-height: 1.8;
+}
+
+.laps .each-file-section .lapSelector {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.laps .each-file-section .box1 {
+  border: 1px solid rgb(72, 109, 232);
   cursor: pointer;
+}
+
+.laps .each-file-section .selectedBox1 {
+  background-color: rgb(72, 109, 232);
+}
+
+.laps .each-file-section .box2 {
+  border: 1px solid rgb(197, 83, 5);
+  cursor: pointer;
+}
+
+.laps .each-file-section .selectedBox2 {
+  background-color: rgb(197, 83, 5);
 }
 
 .laps .each-file-section .ul-style li:hover {
@@ -226,15 +250,15 @@ body {
   border-radius: 5px;
 }
 
-.laps .each-file-section .ul-style .selectedFile1,
+/* .laps .each-file-section .ul-style .selectedFile1,
 .laps .each-file-section .ul-style .selectedFile2 {
   position: relative;
   background-color: #d8d2c269;
   color: white;
   font-weight: 900;
   border-radius: 5px;
-}
-
+} */
+/* 
 .laps .each-file-section .ul-style .selectedFile1::before,
 .laps .each-file-section .ul-style .selectedFile2::before {
   content: "";
@@ -247,13 +271,12 @@ body {
   top: 5px;
 }
 .laps .each-file-section .ul-style .selectedFile1::before {
-  /* background-color: rgb(176, 137, 245); */
   background-color: rgb(72, 109, 232);
 }
 
 .laps .each-file-section .ul-style .selectedFile2::before {
   background-color: rgb(197, 83, 5);
-}
+} */
 
 .content .track {
   display: inline-block;
