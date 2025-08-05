@@ -70,8 +70,8 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 32%;
-  height: 90px;
   margin: 10px auto;
+  text-align: center;
   position: relative;
   padding: 5px;
   overflow: hidden;
@@ -92,16 +92,14 @@ body {
 }
 
 .each-upload .label_file .text-span {
-  position: absolute;
-  top: 30%;
-  left: 40%;
+  
 }
 
 .each-upload .label_file .str_file_name {
-  width: 100%;
+  display: block;
   font-size: 12px;
-  position: absolute;
-  top: 58%;
+  height: 40px;
+  overflow: hidden;
 }
 
 .each-upload .label_file .main-color {
@@ -120,7 +118,7 @@ body {
   border-radius: 10px;
   padding: 5px;
   text-align: center;
-  margin: 10px auto;
+  margin: 2px auto;
 }
 .about-files span {
   background-color: #821131;
@@ -185,6 +183,7 @@ body {
   height: 600px;
   margin: 10px auto;
   vertical-align: top;
+  overflow-y: auto;
 }
 
 .laps .each-file-section .filename_laps {
@@ -435,7 +434,28 @@ body {
   display: none;
 }
 
+.tabs {
+  display: block;
+  width: 100%;
+}
+
+.tabs .tab {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: #07101a;
+  color: white;
+  padding: 8px 10px;
+  margin: 4px auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tabs .selected-tab {
+  background-color: #245389;
+}
+
 .footer {
   width: 100%;
-  height: 100px;
+  height: 0px;
 }
