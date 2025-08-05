@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
+  <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="style.css?v=0.3.1">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -65,7 +66,9 @@
         <canvas class="small-canvas" id="small-delta" style="display: none;"></canvas>
         <canvas class="main-canvas" id="delta"></canvas>
       </div>
-      <canvas class="track-canvas" id="track-canvas"></canvas>
+      <div class="track-canvas" id="track-parent">
+        <div id="track-div"></div>
+      </div>
     </div>
     <div class="data-canvas">
       <div class="controllers">
@@ -132,81 +135,77 @@
           <span class="cond_value file2Info">0.00L</span>
         </div>
       </div>
+      <div class="tabs">
+        <span class="tab selected-tab" data-tab-for="driving-style-tab">Driving Style</span>
+        <span class="tab" data-tab-for="ride-height-tab">Ride Height</span>
+      </div>
       <!-- End Second file -->
-      <!-- <div class="each-canvas">
-        <canvas class="small-canvas" id="small-delta"></canvas>
-        <canvas class="main-canvas" id="delta"></canvas>
-      </div> -->
-      <div class="each-canvas">
-        <canvas class="small-canvas" id="small-throttle"></canvas>
-        <canvas class="main-canvas" id="throttle"></canvas>
-      </div>
-      <div class="each-canvas">
-        <canvas class="small-canvas" id="small-brake"></canvas>
-        <canvas class="main-canvas" id="brake"></canvas>
-      </div>
-      <div class="each-canvas">
-        <canvas class="small-canvas" id="small-speed"></canvas>
-        <canvas class="main-canvas" id="speed"></canvas>
-      </div>
-      <div class="each-canvas">
-        <canvas class="small-canvas" id="small-gear"></canvas>
-        <canvas class="main-canvas" id="gear"></canvas>
-      </div>
-      <div class="each-canvas">
-        <canvas class="small-canvas" id="small-CFSRideHeight"></canvas>
-        <canvas class="main-canvas" id="CFSRideHeight"></canvas>
-      </div>
-      <div class="each-canvas">
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-LFRideHeight"></canvas>
-          <canvas class="main-canvas" id="LFRideHeight"></canvas>
+      <div class="tab-div" data-tab="driving-style-tab">
+        <div class="each-canvas">
+          <canvas class="small-canvas" id="small-throttle"></canvas>
+          <canvas class="main-canvas" id="throttle"></canvas>
         </div>
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
-          <canvas class="main-canvas" id="RFRideHeight"></canvas>
+        <div class="each-canvas">
+          <canvas class="small-canvas" id="small-brake"></canvas>
+          <canvas class="main-canvas" id="brake"></canvas>
+        </div>
+        <div class="each-canvas">
+          <canvas class="small-canvas" id="small-speed"></canvas>
+          <canvas class="main-canvas" id="speed"></canvas>
+        </div>
+        <div class="each-canvas">
+          <canvas class="small-canvas" id="small-gear"></canvas>
+          <canvas class="main-canvas" id="gear"></canvas>
         </div>
       </div>
-      <!-- <div class="each-canvas">
-        <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
-        <canvas class="main-canvas" id="RFRideHeight"></canvas>
-      </div> -->
-      <div class="each-canvas">
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-LRRideHeight"></canvas>
-          <canvas class="main-canvas" id="LRRideHeight"></canvas>
+      <!-- TODO:: instead of block, use visiablity!! -->
+      <div class="tab-div" data-tab="ride-height-tab" style="display: none;">
+        <div class="each-canvas">
+          <canvas class="small-canvas" id="small-CFSRideHeight"></canvas>
+          <canvas class="main-canvas" id="CFSRideHeight"></canvas>
         </div>
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
-          <canvas class="main-canvas" id="RRRideHeight"></canvas>
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LFRideHeight"></canvas>
+            <canvas class="main-canvas" id="LFRideHeight"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RFRideHeight"></canvas>
+            <canvas class="main-canvas" id="RFRideHeight"></canvas>
+          </div>
         </div>
-      </div>
-      <!-- <div class="each-canvas">
-        <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
-        <canvas class="main-canvas" id="RRRideHeight"></canvas>
-      </div> -->
-
-      <!-- FRONT -->
-      <div class="each-canvas">
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-LFTemps"></canvas>
-          <canvas class="main-canvas" id="LFTemps"></canvas>
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LRRideHeight"></canvas>
+            <canvas class="main-canvas" id="LRRideHeight"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RRRideHeight"></canvas>
+            <canvas class="main-canvas" id="RRRideHeight"></canvas>
+          </div>
         </div>
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-RFTemps"></canvas>
-          <canvas class="main-canvas" id="RFTemps"></canvas>
+        <!-- FRONT -->
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LFTemps"></canvas>
+            <canvas class="main-canvas" id="LFTemps"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RFTemps"></canvas>
+            <canvas class="main-canvas" id="RFTemps"></canvas>
+          </div>
         </div>
-      </div>
-
-      <!-- REAR -->
-      <div class="each-canvas">
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-LRTemps"></canvas>
-          <canvas class="main-canvas" id="LRTemps"></canvas>
-        </div>
-        <div class="split-canvases">
-          <canvas class="small-canvas" id="small-RRTemps"></canvas>
-          <canvas class="main-canvas" id="RRTemps"></canvas>
+  
+        <!-- REAR -->
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LRTemps"></canvas>
+            <canvas class="main-canvas" id="LRTemps"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RRTemps"></canvas>
+            <canvas class="main-canvas" id="RRTemps"></canvas>
+          </div>
         </div>
       </div>
       
@@ -227,6 +226,19 @@
   </div>
 
   <div class="footer"></div>
-  <script src="all.min.js?v=0.3.1"></script>
+  <!-- <script src="yaml.min.js"></script>
+  <script src="leaflet/leaflet.js"></script>
+  <script src="DataLap.js"></script>
+  <script src="Tires.js"></script>
+  <script src="TrackCoordinate.js"></script>
+  <script src="LapTime.js"></script>
+  <script src="IbtFile.js"></script>
+  <script src="DataSmallCanvas.js"></script>
+  <script src="DataCanvas.js"></script>
+  <script src="TrackDiv.js"></script>
+  <script src="TrackCanvas.js"></script>
+  <script src="Canvases.js"></script>
+  <script src="main.js"></script> -->
+  <script src="all.min.js?v=0.3.2"></script>
 </body>
 </html>
