@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iRTelemetry</title>
   <link rel="stylesheet" href="leaflet/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=1.0">
+  <link rel="stylesheet" href="style.css?v=1.2">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -139,6 +139,8 @@
       <div class="tabs">
         <span class="tab selected-tab" data-tab-for="driving-style-tab">Driving Style</span>
         <span class="tab" data-tab-for="ride-height-tab">Ride Height</span>
+        <span class="tab" data-tab-for="shock-tab">Shocks</span>
+        <span class="tab" data-tab-for="tires-tab">Tires</span>
       </div>
       <!-- End Second file -->
       <div class="tab-div" data-tab="driving-style-tab">
@@ -209,6 +211,54 @@
           </div>
         </div>
       </div>
+
+      <div class="tab-div" data-tab="shock-tab" style="display: none;">
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LFshockDefl"></canvas>
+            <canvas class="main-canvas" id="LFshockDefl"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RFshockDefl"></canvas>
+            <canvas class="main-canvas" id="RFshockDefl"></canvas>
+          </div>
+        </div>
+
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LRshockDefl"></canvas>
+            <canvas class="main-canvas" id="LRshockDefl"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RRshockDefl"></canvas>
+            <canvas class="main-canvas" id="RRshockDefl"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-div" data-tab="tires-tab" style="display: none;">
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LFspeed"></canvas>
+            <canvas class="main-canvas" id="LFspeed"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RFspeed"></canvas>
+            <canvas class="main-canvas" id="RFspeed"></canvas>
+          </div>
+        </div>
+
+        <div class="each-canvas">
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-LRspeed"></canvas>
+            <canvas class="main-canvas" id="LRspeed"></canvas>
+          </div>
+          <div class="split-canvases">
+            <canvas class="small-canvas" id="small-RRspeed"></canvas>
+            <canvas class="main-canvas" id="RRspeed"></canvas>
+          </div>
+        </div>
+      </div>
       
     </div>
     <div class="steeringWheel" style="display: none;">
@@ -227,6 +277,6 @@
   </div>
 
   <div class="footer"></div>
-  <script src="all.min.js?v=1.1"></script>
+  <script src="all.min.js?v=1.2"></script>
 </body>
 </html>
